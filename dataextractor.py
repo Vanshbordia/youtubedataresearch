@@ -36,7 +36,7 @@ def yttimeconvert(duration):
       second = 0
    return day + hour + minute + second
 def main(urs):
-   url = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id="+urs+api
+   url = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id="+urs+"&key="+api
    response = urlopen(url)
    json_load = json.loads(response.read())
 
