@@ -6,6 +6,7 @@ import cv2
 import numpy as np
 import pandas as pd
 from google.colab.patches import cv2_imshow
+df=pd.read_csv('Dataset1_clean.csv')
 def get_dominant_color(image, k=4, image_processing_size=None):
 
     # resize image if new dims provided
