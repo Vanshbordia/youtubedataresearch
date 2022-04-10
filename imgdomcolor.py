@@ -5,8 +5,7 @@ import argparse
 import cv2
 import numpy as np
 import pandas as pd
-from google.colab.patches import cv2_imshow
-df=pd.read_csv('Dataset1_clean.csv')
+df=pd.read_csv("Dataset1_clean.csv")
 def get_dominant_color(image, k=4, image_processing_size=None):
 
     # resize image if new dims provided
@@ -53,3 +52,4 @@ for i in range(len(df)):
   #cv2_imshow( output_image)
   #print(dom_color_hsv[1][1])
   df2 = df2.append( pd.Series([df.iloc[i,15],dom_color_hsv[1][1]],index=df2.columns),ignore_index=True)
+  df2.to_csv("color.csv", mode='a', header=False, index=False)
